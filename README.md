@@ -41,18 +41,14 @@ Parameters	Analysis parameters used
 ## Hierarchical Typing Logic
 
  * Level 1 (Major Groups): Maximal mutations shared by ALL samples in group
-
-        Largest group = 'A', next largest = 'B', etc.
-
-        Mutations appear ONLY in defining_mutations column
-
+   * Largest group = 'A', next largest = 'B', etc.
+   * Mutations appear ONLY in defining_mutations column
  * Level 2 (Subgroups): NEW mutations within each major group
-
-        Simpler groups = '.1', more complex = '.2', '.3'
-
-        Mutations NEVER appear in higher levels
-
+   * Simpler groups = '.1', more complex = '.2', '.3'
+   * Mutations NEVER appear in higher levels
  * Level 3+: Continue recursively until all mutations used
+
+
 ```bash
 Example:
 A (defining: G:V13A, G:F14S)
@@ -72,14 +68,15 @@ A (defining: G:V13A, G:F14S)
 |-t, --threads	        | Number of threads	            |      CPU count      |
 
 ## Type Definition Columns
-Column	Description
-type	Hierarchical designation (A, A.1, B.2.1)
-Level1, Level2, Level3	Individual level components
-samples	Samples in this type
-count	Number of samples
-defining_mutations	Level 1 mutations
-level2_mutations, level3_mutations	Subgroup mutations
-total_mutations	Combined mutation count
+|         **Column**	|         **Description**                    |
+|-----------------------|--------------------------------------------|
+|type	                | Hierarchical designation (A, A.1, B.2.1)   |
+|Level1, 2, 3	        | Individual level components                |
+|samples	            |    Samples in this type                    |
+|count	                |    Number of samples                       |
+|defining_mutations	    |     Level 1 mutations                      |
+|level2/3_mutations	    |    Subgroup mutations                      |
+|total_mutations        |	Combined mutation count                  |
 
 ## Dependencies
 |Package  |	Version  |
