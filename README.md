@@ -15,7 +15,7 @@ A Python pipeline for codon-aware variant calling and hierarchical phylogenetic 
 git clone https://github.com/yourusername/rabv-variant-caller.git
 cd rabv-variant-caller
 pip install -r requirements.txt
-
+```
 
 ## Quick Start
 python rabv_variant_caller.py -g reference.gb -r reference.fasta -s samples.fasta -o output
